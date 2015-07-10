@@ -2,7 +2,7 @@
 #include <windows.h>
 
 
-// this is decoder stub , which the shellcode  is preceded with , it simply xor's it with 'DEADC0DE' 
+// this is the decoder stub , which the shellcode  is preceded with , it simply xor's every 4 bytes with 'DEADC0DE' 
 
 //----------------------------
 __asm 
