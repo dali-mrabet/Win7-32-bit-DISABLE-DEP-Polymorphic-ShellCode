@@ -1,5 +1,13 @@
-// shellcode1.cpp : Defines the entry point for the console application.
-//
+*******************************************************
+* written by : Mohamed ali Mrabet                     *
+* facebook :   https://www.facebook.com/dali.mrabet.3 *
+* Blog :       http://dalimrabet.blogspot.com/        *
+*                                                     *
+*******************************************************
+
+
+//Using any part of this code for malicious purposes is expressly forbidden.
+
 
 #include "stdafx.h"
 #include <windows.h>
