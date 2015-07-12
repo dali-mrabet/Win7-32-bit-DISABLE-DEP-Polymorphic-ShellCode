@@ -83,10 +83,10 @@ UNICODE_STRING  sh ;
     k[11]='l';
     k[12]=0x0;
 
-    /*well , this the weirdest thing I have ever seen in programming .
+    /*well , this is the weirdest thing I have ever seen in programming .
       Using Gcc Compiler , It does work if and only if the function pointer(myGetProcAdd) is declared as static variable,
       whereas the  myloadLibrary function pointer works with no issues (without 'static' prefix),
-      during the run-time , it generates the NTstatus "PRIVILGED_INSTRUCTION_ERROR".
+      during the run-time , it generates the NTSTATUS "PRIVILGED_INSTRUCTION_ERROR".
       This crap took me nearly the whole day to work it out , and still have no idea from where the error stems !!
       !! such a HEADACHE!!
      */
