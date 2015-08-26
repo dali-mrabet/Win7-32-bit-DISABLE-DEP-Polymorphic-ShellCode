@@ -1,7 +1,7 @@
 *******************************************************
 * written by : Mohamed ali Mrabet                     *
 * facebook :   https://www.facebook.com/dali.mrabet.3 *
-* Blog :       http://dalimrabet.blogspot.com/        *
+* Blog :       http://dali-mrabet1.rhcloud.com/        *
 *                                                     *
 *******************************************************
 
